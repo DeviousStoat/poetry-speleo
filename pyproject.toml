@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "poetry-speleo"
+version = "0.1.0"
+description = ""
+authors = ["DeviousStoat <devious@stoat.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+poetry = "^1.2"
+
+[tool.poetry.plugins."poetry.application.plugin"]
+speleo-plugin = "poetry_speleo.plugin:Speleo"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
